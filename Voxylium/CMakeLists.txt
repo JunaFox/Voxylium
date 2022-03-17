@@ -3,4 +3,4 @@ project(Voxylium)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_library(Voxylium library.cpp)
+add_library(Voxylium voxylium.cpp)

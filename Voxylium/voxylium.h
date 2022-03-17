@@ -23,9 +23,8 @@
  * -----------------------------------------------------------------------------------------
  */
 
-#include <iostream>
+#ifndef VOXYLIUM_LIBRARY_H
+#define VOXYLIUM_LIBRARY_H
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
-}
+
+#endif //VOXYLIUM_LIBRARY_H
