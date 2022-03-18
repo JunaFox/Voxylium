@@ -5,5 +5,5 @@ find_path(VOXYLIUM_INCLUDE_DIR voxylium.h
         PATHS ${FIND_VOXYLIUM_PATHS})
 
 find_library(VOXYLIUM_LIBRARY
-             NAMES libvoxylium
+             NAMES libVoxylium
              PATHS ${FIND_VOXYLIUM_PATHS}/cmake-build-release)

@@ -23,9 +23,14 @@
  * -----------------------------------------------------------------------------------------
  */
 
-#include <iostream>
+#include <voxylium_exception.h>
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    try {
+        ThrowVoxyliumExc(12, "info");
+    } catch (VoxyliumException &e){
+        std::printf(e.what());
+    }
+
     return 0;
 }

@@ -12,8 +12,8 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
 # link to voxylium library
 find_package(Voxylium REQUIRED)
-include_directories(${Voxylium_INCLUDE_DIR})
-target_link_libraries(${PROJECT_NAME} ${Voxylium_LIBRARY})
+include_directories(${VOXYLIUM_INCLUDE_DIR})
+target_link_libraries(${PROJECT_NAME} ${VOXYLIUM_LIBRARY})
 
 # link to GLFW library
 find_package(GLFW REQUIRED)

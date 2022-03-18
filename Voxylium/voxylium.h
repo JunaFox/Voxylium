@@ -26,5 +26,6 @@
 #ifndef VOXYLIUM_LIBRARY_H
 #define VOXYLIUM_LIBRARY_H
 
+#include "voxylium_exception.h"
 
 #endif //VOXYLIUM_LIBRARY_H

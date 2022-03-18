@@ -4,7 +4,7 @@ project(Voxylium)
 set(CMAKE_CXX_STANDARD 23)
 
 # add source files to library
-set(SOURCE_FILES voxylium.cpp)
+set(SOURCE_FILES voxylium.cpp voxylium_exception.h)
 add_library(${PROJECT_NAME} ${SOURCE_FILES})
 
 # append cmake module path
