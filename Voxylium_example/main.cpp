@@ -23,12 +23,12 @@
  * -----------------------------------------------------------------------------------------
  */
 
-#include <voxylium_exception.h>
+#include <voxylium.h>
 
 int main() {
     try {
         ThrowVoxyliumExc(12, "info");
-    } catch (VoxyliumException &e){
+    } catch (VoxyliumException &e) {
         std::printf(e.what());
     }
 

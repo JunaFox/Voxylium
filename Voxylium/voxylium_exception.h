@@ -29,15 +29,13 @@
 #include <exception>
 #include <string>
 
-#define __CUSTOM_THROW(ec, info) \
-    throw VoxyliumException(ec, __FILE__, __FUNCTION__, __LINE__, info)
-
 /**
  * @brief Throws a voxylium exception
  * @param ec Error code
  * @param info Info about error
  */
-#define ThrowVoxyliumExc(ec, info) __CUSTOM_THROW(ec, info)
+#define ThrowVoxyliumExc(ec, info) \
+	throw VoxyliumException(ec, __FILE__, __FUNCTION__, __LINE__, info)
 
 /**
  * \brief Represents a voxylium exception
@@ -64,7 +62,7 @@ public:
 				"\nAt line: " + std::to_string(line) +
 				"\nError code: " + std::to_string(ec) +
 				"\nGiven information: " + std::string(info) +
-				"\n------------------->       END        <----------------------")
+				"\n------------------->       END       <----------------------")
     {
     }
 
