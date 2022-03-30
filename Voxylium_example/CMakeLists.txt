@@ -4,7 +4,7 @@ project(Voxylium_example)
 set(CMAKE_CXX_STANDARD 23)
 
 # add source files to executable
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES main.cpp ../Voxylium/Window/window.h ../Voxylium/Window/window.cpp)
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 # append cmake module path

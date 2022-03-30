@@ -56,7 +56,7 @@ public:
         line(line_),
         func(func_),
         info(info_),
-		message("------------------->Voxylium Exception<---------------------"
+		message("\n------------------->Voxylium Exception<---------------------"
 				"\nError occurred in: " + std::string(file) +
 				"\nAt function: " + std::string(func) +
 				"\nAt line: " + std::to_string(line) +

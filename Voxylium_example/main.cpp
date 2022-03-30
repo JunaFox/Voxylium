@@ -26,11 +26,11 @@
 #include <voxylium.h>
 
 int main() {
-    try {
-        ThrowVoxyliumExc(12, "info");
-    } catch (VoxyliumException &e) {
-        std::printf(e.what());
-    }
+    auto* window = new Window("Test");
+
+	while (window->update()) {
+
+	}
 
     return 0;
 }

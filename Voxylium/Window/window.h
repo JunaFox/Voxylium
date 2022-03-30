@@ -23,4 +23,45 @@
  * -----------------------------------------------------------------------------------------
  */
 
-#include "voxylium.h"
+#ifndef _WINDOW_H_
+#define _WINDOW_H_
+
+// Tell glfw to include vulkan
+#define GLFW_INCLUDE_VULKAN
+
+/*
+ * Headers
+ */
+#include "voxylium_exception.h"
+#include "GLFW/glfw3.h"
+
+/**
+ * Represents a glfw window
+ */
+class Window {
+ public:
+	/**
+	 * Initialize glfw library and create/open window
+	 * @param windowName Name of window
+	 */
+	Window(const char* windowName);
+
+	/**
+	 * Destructor closes the window and terminates the GLFW library
+	 */
+	~Window();
+
+	/**
+	 * Needs to be called as long as the window needs to process events
+	 * @return TRUE if window is open
+	 * @return FALSE if window is closed
+	 */
+	bool update();
+
+ private:
+	const char* description;
+	const GLFWvidmode* videoMode;
+	GLFWwindow* window;
+};
+
+#endif //_WINDOW_H_
