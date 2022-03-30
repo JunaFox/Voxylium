@@ -37,6 +37,13 @@ Window::Window(const char* windowName) {
 
 	// Create a full screen window
 	videoMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+	if (!videoMode) {
+		// Get glfw error description
+		glfwGetError(&description);
+		// Throw exception
+		ThrowVoxyliumExc(2, std::string("Unable to obtain video mode of primary monitor: ")
+								.append(description == nullptr ? "No GLFW info" : description).c_str());
+	}
 	// Set glfw window hints
 	glfwWindowHint(GLFW_RED_BITS, videoMode->redBits);
 	glfwWindowHint(GLFW_GREEN_BITS, videoMode->greenBits);
@@ -49,7 +56,7 @@ Window::Window(const char* windowName) {
 		// Get glfw error description
 		glfwGetError(&description);
 		// Throw exception
-		ThrowVoxyliumExc(2, std::string("Window couldn't be opened: ")
+		ThrowVoxyliumExc(3, std::string("Window couldn't be opened: ")
 								.append(description == nullptr ? "No GLFW info" : description).c_str());
 	}
 }
@@ -69,7 +76,7 @@ bool Window::update() {
 		// Check for errors in event poll
 		glfwGetError(&description);
 		if (description != nullptr) {
-			ThrowVoxyliumExc(3, std::string("Error while processing window events: ").append(description).c_str());
+			ThrowVoxyliumExc(4, std::string("Error while processing window events: ").append(description).c_str());
 		}
 
 		return true;

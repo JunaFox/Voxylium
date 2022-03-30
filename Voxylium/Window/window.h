@@ -59,8 +59,11 @@ class Window {
 	bool update();
 
  private:
+	/// Used to hold GLFW error information
 	const char* description;
+	/// Current video mode of the current monitor
 	const GLFWvidmode* videoMode;
+	/// GLFW window
 	GLFWwindow* window;
 };
 
