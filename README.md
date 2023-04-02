@@ -1,3 +1,3 @@
 # Voxylium
 
-A voxel engine that uses vulkan and glfw.
+A voxel engine that uses wgpu.

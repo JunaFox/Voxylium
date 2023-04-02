@@ -1,8 +1,6 @@
-Voxylium/.idea
-Voxylium/cmake-build-debug
-Voxylium/cmake-build-release
 
-Voxylium_example/.idea
-Voxylium_example/cmake-build-debug
 
-.idea
+# Added by cargo
+
+/voxylium/target
+/voxylium_example/target
