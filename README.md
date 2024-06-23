@@ -1,3 +1,3 @@
 # Voxylium
 
-A voxel engine that uses wgpu.
+A game engine that uses wgpu.
